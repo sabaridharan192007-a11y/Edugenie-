@@ -1,0 +1,30 @@
+EDUGENIE - QUICK START
+
+1. Open this folder in VS Code, then open a Terminal.
+2. Create and activate a virtual environment.
+
+   Windows (PowerShell):
+     python -m venv .venv
+     .\.venv\Scripts\Activate.ps1
+
+   macOS / Linux:
+     python3 -m venv .venv
+     source .venv/bin/activate
+
+3. Install:
+     pip install -r requirements.txt
+
+4. (Optional, for real AI answers) copy .env.example to .env and set:
+     GEMINI_API_KEY=your_key_here
+   No key? The app runs in demo mode with canned answers.
+
+5. Start the server:
+     uvicorn main:app --reload
+
+6. Open http://127.0.0.1:8000
+
+Run the tests (install dev tools first):
+     pip install -r requirements-dev.txt
+     pytest -q
+
+DEPLOYING: see DEPLOY.md (Dockerfile, Procfile and render.yaml are included).
